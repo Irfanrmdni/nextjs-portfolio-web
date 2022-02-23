@@ -1,0 +1,50 @@
+//? navbar
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 1rem 3rem;
+
+    //* Nesting element
+    .logo {
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    //* Nesting element
+    .nav_link {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .nav_item {
+            position: relative;
+            display: inline-block;
+            font-size: 1.125rem;
+            font-weight: 400;
+        }
+
+        .active {
+            font-weight: 600;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                width: 25px;
+                height: 2px;
+                background-color: rgb(29, 31, 31);
+            }
+        }
+    }
+
+    .nav_link li:not(:last-child) {
+        margin-right: 2.2rem;
+    }
+}

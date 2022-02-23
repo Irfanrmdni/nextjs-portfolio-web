@@ -1,0 +1,108 @@
+//? hero
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 0 3rem;
+
+    //* nesting element
+    .text_wrapper {
+        width: 50%;
+
+        &.w-full {
+            width: 100%;
+            margin-top: 5rem;
+
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .description {
+                font-size: 1.25rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: bolder;
+            text-transform: capitalize;
+            color: rgb(29, 31, 31);
+        }
+
+        .description {
+            font-size: 1.375rem;
+            white-space: pre-wrap;
+            line-height: 1.5;
+            margin-top: 1.2rem;
+            margin-bottom: 3rem;
+            color: rgb(29, 31, 31);
+        }
+
+        .cta {
+            display: inline-block;
+            font-size: 1.2rem;
+            padding: 12px 28px;
+            border-radius: 5px;
+            background-color: rgb(29, 31, 31);
+            color: white;
+            transition: all .2s ease-in;
+
+            &:hover {
+                background-color: rgb(0, 0, 0);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    //* portfolio
+    .portfolio-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+
+        .portfolio-item {
+            text-align: center;
+            margin-top: 2rem;
+
+            .portfolio-name {
+                font-size: 1.1rem;
+                text-transform: capitalize;
+                color: rgb(29, 31, 31);
+                font-weight: 600;
+                margin-top: 1rem;
+                margin-bottom: 5px;
+            }
+
+            .portfolio-category {
+                font-size: 1rem;
+                font-weight: 400;
+                color: rgb(62, 65, 65);
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    //* contact
+    .contact-links {
+        list-style-type: square;
+        padding-left: 18px;
+
+        .contact-item {
+            font-size: 1rem;
+            text-transform: capitalize;
+            color: rgb(29, 31, 31);
+            margin: 1rem 0;
+        }
+    }
+
+    //* nesting element
+    .banner {
+        width: 50%;
+        text-align: right;
+    }
+}

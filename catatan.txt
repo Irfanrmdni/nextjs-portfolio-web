@@ -1,0 +1,31 @@
+Sass
+
+file _app.js adalah file pembungkus dari semua halaman yang ada di dalam folder @pages.
+jadi file _app.js adalah file yang harus ada di dalam proyek nextjs kita
+
+- install Sass di nextjs $npm install sass
+- untuk setup Css Sass kita bisa buat file Sass nya di dalam folder styles/ dan buat dengan ekstensi .scss
+- cara menjalakan Sass nya yaitu dengan import file sass nya kemudian simpan di file _app.js. jadi ketika kita import
+styles sass ke dalam file _app.js maka secara otomatis semua halaman yang ada di dalam @pages akan mengikuti styles
+yang ada di file _app.js
+
+===========================================================================================
+export default function Navbar({router}){
+    return ();
+}
+
+- parameter router itu sama aja dengan props.router
+- jadi ini menggunakan destructuring object
+- jika penulisan router saja tidak menggunakan {} maka akan error
+- karna parameter nya itu merupakan bagian dari props
+
+===========================================================================================
+import { withRouter } from 'next/router'
+
+function Page({ router }) {
+  return <p>{router.pathname}</p>
+}
+
+export default withRouter(Page)
+
+withRouter digunakan untuk mengambil path url dari setiap page
